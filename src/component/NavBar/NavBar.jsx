@@ -9,17 +9,10 @@ import { ImCross } from "react-icons/im";
 
 const NavBar = () => {
   const [show, setShow] = useState(false);
-  const handleClick = () => {
-    if(show){
-      setShow(true)
-    }
+  const showSlider = () => {
+    
+    setShow(show => !show)
   }
-  useEffect(() => {
-    window.addEventListener('click', handleClick);
-    return () => {
-      window.removeEventListener('click', handleClick)
-    }
-  }, [])
   return (
     <div className={style.mainContainer}>
       <div className={style.navContainer}>
@@ -42,7 +35,7 @@ const NavBar = () => {
         </div>
         <div className={style.toggleMenu}>
           <div className={style.toggleMenuItem}
-            onClick={() => setShow(!show)}
+            onClick={showSlider}
           >
      
               <FiMenu id='menuIconHandburg' style={{ color: "black", width: '20px', height: '20px' }} />
@@ -50,7 +43,7 @@ const NavBar = () => {
         </div>
       </div>
       {/* Off canvas section */}
-      <div className={`${show ? style.mainNavListConatinerAfter : style.mainNavListConatinerBefore}`}>
+      <div id={`${show ? style.mainNavListConatinerAfter : style.mainNavListConatinerBefore}`}>
         <div className={style.toggleMenuList}>
 
           <div className={style.toggleMenuListItems}>
@@ -60,7 +53,7 @@ const NavBar = () => {
             <BsFillCartFill /> Cart
           </div>
           <div className={style.toggleMenuListItems}>
-            <BsPersonCircle /> Profile
+            <BsPersonCircle /> Account
           </div>
         </div>
       </div>
