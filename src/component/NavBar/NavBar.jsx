@@ -10,7 +10,6 @@ import { ImCross } from "react-icons/im";
 const NavBar = () => {
   const [show, setShow] = useState(false);
   const showSlider = () => {
-    
     setShow(show => !show)
   }
   return (
@@ -43,7 +42,7 @@ const NavBar = () => {
         </div>
       </div>
       {/* Off canvas section */}
-      <div id={`${show ? style.mainNavListConatinerAfter : style.mainNavListConatinerBefore}`}>
+      <div className={`${style.mainNavListContainer} ${show ? style.showMenu : ''}`}>
         <div className={style.toggleMenuList}>
 
           <div className={style.toggleMenuListItems}>
