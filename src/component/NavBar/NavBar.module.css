@@ -1,33 +1,86 @@
-.navContainer{
+.navContainer {
     display: flex;
     flex-direction: row;
     justify-content: space-between;
     flex-wrap: wrap;
-    padding:  10px;
-    box-shadow: 0 0 10px rgb(151, 149, 149);
-    background-color: #d6d6d6b7;
+    padding: 10px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.692);
+    background-color: #f1f1f1b7;
+    z-index: 0;
+    position: relative;
 }
 
 
-.navList{
+.navList {
     display: flex;
     justify-content: space-around;
     align-items: center;
 }
-.navListItem{
+
+.navListItem {
     margin-left: 30px;
     align-self: center;
     font-size: 16px;
 }
-@media (max-width : 500px){
-    .navList{
-        display: none;
+
+.toggleMenu {
+    display: none;
+}
+
+.mainNavListConatinerBefore {
+    padding: 10px;
+    background-color: rgb(202, 201, 201);
+    width: 60%;
+    height: 100%;
+    z-index: 100;
+    border-bottom-right-radius: 10px;
+    position: absolute;
+    display: none;
+
+}
+
+@keyframes animate{
+    0%{
+        /* opacity:0; */
+        transform: translateX(-100%);
+    }100%{
+        /* opacity:1; */
+        transform: translateX(0%);
     }
 }
-.navListCart{
+
+.mainNavListConatinerAfter {
+    padding: 10px;
+    background-color: rgb(235, 235, 235);
+    box-shadow: 0 0px 2px rgba(0, 0, 0, 0.473);
+    width: 60%;
+    height: 100%;
+    z-index: 100;
+    border-bottom-right-radius: 10px;
+    position: absolute;
+    top: 0;
+    animation: animate 1s ease-in-out;
+
+}
+
+.toggleMenuList {
+    display: flex;
+    flex-direction: column;
+}
+
+.toggleMenuListItems {
+    margin-top: 20px;
+}
+
+.toggleMenuCancel {
+    align-self: end;
+}
+
+.navListCart {
     position: relative;
 }
-.cartBadge{
+
+.cartBadge {
     background-color: black;
     border-radius: 50%;
     color: white;
@@ -39,3 +92,17 @@
     left: -5;
 }
 
+
+@media (max-width : 500px) {
+    .navList {
+        display: none;
+    }
+
+    .toggleMenu {
+        display: flex;
+    }
+
+    .toggleMenuItem {
+        align-self: center;
+    }
+}
