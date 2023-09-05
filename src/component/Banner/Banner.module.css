@@ -1,0 +1,42 @@
+.bannerImageContainer {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+.bannerImageContainer img {
+    height: auto;
+    max-width: 100%;
+}
+.bannerContainer{
+    display: flex;
+    justify-content: center;
+    padding: 10px;
+    flex-wrap: wrap;
+    background-color: rgb(24, 23, 23);
+    color: rgba(255, 255, 255, 0.822);
+}
+.bannerSecondImage img{
+    width:80%;
+    height: auto;
+}
+.bannerImageDescription {
+    color: white;
+    font-size: 22px;
+    font-weight: 600;
+    max-width: 600px;
+    font-family: 'Courier New', Courier, monospace;
+    margin-top: 10px;
+}
+@media (min-width:500px) {
+    .bannerSecondImage img{
+        height: 200px;
+    }
+}
+@media (max-width:500px) {
+    .bannerImageDescription{
+        font-size: 5vw;
+        line-height: 2rem;
+    }
+}
