@@ -4,7 +4,7 @@
     justify-content: space-between;
     flex-wrap: wrap;
     padding: 10px;
-    box-shadow: 0 0 10px rgba(0, 0, 0, 0.692);
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.432);
     background-color: #f1f1f1b7;
     z-index: 0;
     position: relative;
@@ -38,19 +38,13 @@
         opacity: 0;
     }
 }
-
-#mainNavListConatinerBefore {
-    padding: 10px;
-    background-color: rgb(235, 235, 235);
-    width: 60%;
-    height: 100%;
-    z-index: 100;
-    border-bottom-right-radius: 10px;
-    position: absolute;
-    top: 0;
-    animation: animateBefore 1s ease-in-out;
-    display: none;
+@media (min-width:500px){
+    .mainNavListContainer{
+        display: none;
+    }
 }
+
+
 
 .mainNavListContainer {
     padding: 10px;
@@ -59,6 +53,7 @@
     height: 100%;
     z-index: 100;
     border-bottom-right-radius: 10px;
+    border-right: 1px solid rgba(22, 17, 17, 0.055);
     position: absolute;
     top: 0;
     animation: animateBefore 1s ease-in-out;
@@ -70,7 +65,7 @@
 .showMenu {
     transform: translateX(0%);
     transition: transform 0.5s ease-in-out;
-    /* Adjust the max height to suit your design */
+    
 }
 
 
@@ -86,19 +81,6 @@
     }
 }
 
-#mainNavListConatinerAfter {
-    padding: 10px;
-    background-color: rgb(235, 235, 235);
-    box-shadow: 0 0px 2px rgba(0, 0, 0, 0.473);
-    width: 60%;
-    height: 100%;
-    z-index: 100;
-    border-bottom-right-radius: 10px;
-    position: absolute;
-    top: 0;
-    animation: animate 1s ease-in-out;
-
-}
 
 .toggleMenuList {
     display: flex;
@@ -107,6 +89,10 @@
 
 .toggleMenuListItems {
     margin-top: 20px;
+    cursor: pointer;
+}
+.toggleMenuListItems a{
+   color: #d10000;
 }
 
 .toggleMenuCancel {

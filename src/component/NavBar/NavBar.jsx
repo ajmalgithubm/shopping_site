@@ -4,14 +4,17 @@ import { AiFillHome } from "react-icons/ai";
 import { BsFillCartFill } from "react-icons/bs";
 import { BsPersonCircle } from "react-icons/bs";
 import { FiMenu } from "react-icons/fi";
-import { FiXCircle } from "react-icons/fi";
-import { ImCross } from "react-icons/im";
+import { useSelector } from 'react-redux/es/hooks/useSelector';
+import { useDispatch } from 'react-redux';
+import { changeShow} from '../../Redux/features/show';
 
 const NavBar = () => {
-  const [show, setShow] = useState(false);
+  const show = useSelector(state => state.showSlider.show);
+  const dispatch = useDispatch();
   const showSlider = () => {
-    setShow(show => !show)
-  }
+    console.log("show slider is called..")
+    dispatch(changeShow())
+  } 
   return (
     <div className={style.mainContainer}>
       <div className={style.navContainer}>
@@ -45,14 +48,15 @@ const NavBar = () => {
       <div className={`${style.mainNavListContainer} ${show ? style.showMenu : ''}`}>
         <div className={style.toggleMenuList}>
 
-          <div className={style.toggleMenuListItems}>
-            <AiFillHome /> Home
+          <div className={style.toggleMenuListItems}
+          >
+            <a ><AiFillHome /> Home</a>
           </div>
           <div className={style.toggleMenuListItems}>
-            <BsFillCartFill /> Cart
+            <a><BsFillCartFill /> Cart</a>
           </div>
           <div className={style.toggleMenuListItems}>
-            <BsPersonCircle /> Account
+            <a > <BsPersonCircle /> Account</a>
           </div>
         </div>
       </div>
