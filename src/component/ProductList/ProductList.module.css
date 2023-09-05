@@ -17,13 +17,35 @@
     box-shadow: 0 0px 10px rgba(231, 64, 64, 0.356);
     margin-bottom: 0px;
     padding: 0;
+    overflow: hidden;
+}
+.imageContainer{
+    display: flex;
+    justify-content: center;
+    overflow: hidden;
     position: relative;
 }
-.cardItem img{
+.imageContainer img{
     cursor: pointer;
+    max-height: 100%;
 }
 .cartIcon {
     position: absolute;
     right: 30px;
     cursor: pointer;
+    z-index: 100;
+    opacity: 0;
+}
+@keyframes opacityChange {
+    0% {
+        opacity: 0;
+    }
+
+    100% {
+        opacity: 1;
+    }
+}
+.imageContainer:hover .cartIcon{
+    animation: opacityChange 0.7s ease-in-out;
+    opacity: 1;
 }
