@@ -14,7 +14,7 @@
 }
 
 .cardItem {
-    box-shadow: 0 0px 10px rgba(250, 236, 236, 0.842);
+    box-shadow: 0 0px 5px rgba(255, 255, 255, 0.753);
     margin-bottom: 0px;
     padding: 0;
     overflow: hidden;
