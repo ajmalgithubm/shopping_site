@@ -12,7 +12,7 @@ const Content = () => {
             <p>Get exciting offers on all products</p>
           </div>
           <div className={style.bannerButton}>
-            <button>SHOP NOW</button>
+            <button className='btn-light'>SHOP NOW</button>
           </div>
         </div>
       </div>
