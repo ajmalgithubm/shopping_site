@@ -1,0 +1,29 @@
+.mainContainer {
+    display: flex;
+    justify-content: space-around;
+    flex-wrap: wrap;
+    padding: 10px;
+}
+
+.mainContainer div {
+    margin-top: 10px;
+}
+
+#buttonList button:focus {
+    box-shadow: none;
+}
+
+.cardItem {
+    box-shadow: 0 0px 10px rgba(231, 64, 64, 0.356);
+    margin-bottom: 0px;
+    padding: 0;
+    position: relative;
+}
+.cardItem img{
+    cursor: pointer;
+}
+.cartIcon {
+    position: absolute;
+    right: 30px;
+    cursor: pointer;
+}
