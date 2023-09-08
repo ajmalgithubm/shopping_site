@@ -6,8 +6,8 @@ const Content = () => {
       <div className={style.bannerContainer}>
         <div className={style.bannerTextContainer}>
           <div className={style.bannerTitle}>
-            <p>Experience the allure of Adlor!</p>
-          </div>
+            <p>Experience the allure of Adlor!</p> 
+          </div>  
           <div className={style.bannerSubTitle}>
             <p>Get exciting offers on all products</p>
           </div>
